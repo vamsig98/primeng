@@ -1,0 +1,40 @@
+<div>
+  <div class="left_content">
+    <ul class="category">
+      <li *ngFor="let item of categories" (click)="categoryChanged(item)">
+        {{ item.label }}
+      </li>
+    </ul>
+  </div>
+  <div class="right_content">
+    <p-orderList [value]="data" [dragdrop]="true">
+      <ng-template let-car pTemplate="item" let-index="rowIndex">
+        <div>
+          <p-rating
+            [(ngModel)]="car.starred"
+            [stars]="1"
+            [cancel]="false"
+            (onRate)="rateChanged(car)"
+          ></p-rating>
+          <span class="check">
+            <p-checkbox
+              [(ngModel)]="car.completed"
+              [binary]="true"
+              inputId="binary"
+              (onChange)="onCompleted(car)"
+            ></p-checkbox>
+          </span>
+          <div class="title">
+            {{ car.title }}
+          </div>
+          <div class="details">
+            <ul class="items">
+              <li class="item-li" *ngFor="let item of car.tags" [ngClass]="item">{{ item }}</li>
+            </ul>
+            <span>{{ getDate(car.due_date) }}</span>
+          </div>
+        </div>
+      </ng-template>
+    </p-orderList>
+  </div>
+</div>

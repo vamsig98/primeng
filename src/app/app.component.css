@@ -1,0 +1,59 @@
+::ng-deep.p-orderlist-controls {
+  display: none !important;
+}
+.left_content {
+  float: left;
+  width: 10%;
+}
+
+.right_content {
+  float: right;
+  width: 90%;
+}
+.details {
+  float: right;
+  margin-top: -27px;
+}
+.title {
+  font-size: 14px;
+  margin: 15px 5px 0 0;
+}
+.check {
+  margin-left: 10px;
+}
+.item-li {
+  border: 2px solid black;
+  display: inline;
+  float: right;
+  padding-right: 10p;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.items {
+  float: left;
+}
+li {
+  list-style-type: none;
+}
+.category li {
+  cursor: pointer;
+  padding: 10px;
+}
+.high {
+  background-color: #f0a5a5;
+}
+.update {
+  background-color: #c2e6c2;
+}
+
+.low {
+  background-color: #c0dede;
+}
+.medium {
+  background-color: #e8c990;
+}
+.blocked {
+  background-color: #b0aadb;
+}
